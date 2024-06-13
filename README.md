@@ -6,10 +6,14 @@
 This repository contains implementations of various multi-armed bandit algorithms and experiments designed to compare their performance in both stationary and non-stationary environments.
 
 ## Algorithms Implemented
-1. **Greedy with Non-Optimistic Initial Values**
-2. **Epsilon-Greedy with Fixed Step Size**
-3. **Optimistic Initial Values with Greedy Approach**
-4. **Gradient Bandit Algorithm with Variable Alpha**
+1. **Greedy with Non-Optimistic Initial Values** algorithm initializes the action value estimates to 0 and selects the action with the highest estimated value at each step. It uses an incremental implementation of the simple average method to update the estimates.
+
+2. **Epsilon-Greedy with Fixed Step Size** algorithm selects a random action with probability ϵ and the best-known action with probability 1−ϵ. The action value estimates are updated with a fixed step size.
+
+3. **Optimistic Initial Values with Greedy Approach** algorithm starts with optimistic initial values for the action value estimates to encourage exploration. It then selects the action with the highest estimated value greedily at each step.
+
+4. **Gradient Bandit Algorithm with Variable Alpha** algorithm maintains preference values for each action and uses a softmax function to select actions. The preference values are updated based on a learning rate αα, which is varied to find the optimal performance.
+
 
 ## Part 1: Stationary Environment
 1. **Stationary Setup**: We initialized a 10-armed bandit with normally distributed rewards. We generate 10 means, μi (for i =1, …, 10), from a normal distribution N(0,1) for each of 1000 bandit problems
