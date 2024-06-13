@@ -63,6 +63,8 @@ We compare the performance of three bandit algorithms under different rates of c
 - **Epsilon-Greedy with Decreasing Step Size** shows similar performance to the fixed step size variant but with slightly more variability.
 
 ## Conclusion
+The **gradient bandit algorithm** with alpha α=0.2 performs the best because this learning rate strikes an optimal balance between exploration and exploitation, ensuring stable and efficient updates to action preferences. This balance allows the algorithm to quickly identify and consistently select the optimal actions, maximizing average rewards and the percentage of optimal actions over time. 
+
 The **Epsilon-Greedy with Fixed Step Size** algorithm demonstrates the most stable and favorable performance across different non-stationary conditions, making it the preferable choice for environments where adaptability is crucial.
 
 ________________________________________________________________________________________________________________________________
